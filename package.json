@@ -18,7 +18,7 @@
   "author": "Alex Piqueras <alomsimoy@gmail.com> (http://github.com/alomsimoy)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gaearon/todo-app/issues"
+    "url": "https://github.com/alomsimoy/todo-app/issues"
   },
   "homepage": "https://github.com/alomsimoy/todo-app",
   "devDependencies": {
