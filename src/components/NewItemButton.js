@@ -11,7 +11,7 @@ const NewItemButton = ({ action }) => (
 );
 
 NewItemButton.propTypes = {
-  actions: PropTypes.object.isRequired,
+  action: PropTypes.func.isRequired,
 };
 
 export default NewItemButton;

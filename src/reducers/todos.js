@@ -1,4 +1,7 @@
 import map from 'lodash/map';
+import find from 'lodash/find';
+import filter from 'lodash/filter';
+
 import { ADD_TODO, DELETE_TODO, SELECT_TODO } from '../constants/ActionTypes'
 
 const initialState = [
@@ -27,7 +30,7 @@ export default function todos(state = initialState, action) {
       ];
 
     case DELETE_TODO:
-      return state.filter((todo) => todo.id !== action.id);
+      return filter(state, [ 'selected', false ]);
 
     case SELECT_TODO:
        return map(state, (item) => {

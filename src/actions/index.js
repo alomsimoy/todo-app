@@ -5,9 +5,8 @@ export const addTodo = (text) => ({
   text,
 });
 
-export const deleteTodo = (id) => ({
+export const deleteTodo = () => ({
   type: types.DELETE_TODO,
-  id,
 });
 
 export const selectTodo = (id) => ({

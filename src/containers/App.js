@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import * as TodoActions from '../actions';
 import TodoList from '../components/TodoList';
 import NewItemButton from '../components/NewItemButton';
+import DeleteItemButton from '../components/DeleteItemButton';
 
 const App = ({todos, actions}) => (
   <div>
@@ -14,6 +15,7 @@ const App = ({todos, actions}) => (
       onSelect={actions.selectTodo}
     />
     <NewItemButton action={actions.addTodo} />
+    <DeleteItemButton action={actions.deleteTodo} />
   </div>
 );
 
@@ -27,7 +29,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    actions: bindActionCreators(TodoActions, dispatch),
+  actions: bindActionCreators(TodoActions, dispatch),
 });
 
 export default connect(

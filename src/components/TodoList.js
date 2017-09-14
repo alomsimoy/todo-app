@@ -3,10 +3,15 @@ import PropTypes from 'prop-types';
 import map from 'lodash/map';
 import find from 'lodash/find';
 
+const getSelected = (todos) => {
+    const selected = find(todos, 'selected');
+    return selected ? selected.id : null;
+};
+
 const TodoList = ({ todos, onSelect }) => (
   <select
     size="10"
-    value={find(todos, 'selected').id}
+    value={getSelected(todos)}
     onChange={(event) => onSelect(event.target.value)}
   >
     { map(todos, ({ text , id }) => (
