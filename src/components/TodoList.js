@@ -15,7 +15,7 @@ const TodoList = ({ todos, onSelect }) => (
     onChange={(event) => onSelect(event.target.value)}
   >
     { map(todos, ({ text , id }) => (
-      <option value={id}>
+      <option key={id} value={id}>
         {text}
       </option>
     )) }

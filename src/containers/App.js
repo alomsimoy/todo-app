@@ -6,6 +6,7 @@ import * as TodoActions from '../actions';
 import TodoList from '../components/TodoList';
 import NewItemButton from '../components/NewItemButton';
 import DeleteItemButton from '../components/DeleteItemButton';
+import UndoButton from '../components/UndoButton';
 
 const App = ({todos, actions}) => (
   <div>
@@ -16,6 +17,7 @@ const App = ({todos, actions}) => (
     />
     <NewItemButton action={actions.addTodo} />
     <DeleteItemButton action={actions.deleteTodo} />
+    <UndoButton action={actions.undo} />
   </div>
 );
 
@@ -25,7 +27,7 @@ App.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  todos: state.todos,
+  todos: state.todos.present,
 });
 
 const mapDispatchToProps = dispatch => ({

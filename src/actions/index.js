@@ -14,3 +14,7 @@ export const selectTodo = (id) => ({
   id,
 });
 
+export const undo = () => ({
+  type: types.UNDO,
+});
+

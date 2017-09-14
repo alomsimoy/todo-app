@@ -7,7 +7,11 @@ const showPrompt = (callback) => {
 };
 
 const NewItemButton = ({ action }) => (
-  <button onClick={() => showPrompt(action)} />
+  <button
+    onClick={() => showPrompt(action)}
+  >
+    +
+  </button>
 );
 
 NewItemButton.propTypes = {

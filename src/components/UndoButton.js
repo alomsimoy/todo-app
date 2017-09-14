@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const DeleteItemButton = ({ action }) => (
+const UndoButton = ({ action }) => (
   <button
     onClick={action}
   >
-    -
+    { '<-' }
   </button>
 );
 
-DeleteItemButton.propTypes = {
+UndoButton.propTypes = {
   action: PropTypes.func.isRequired,
 };
 
-export default DeleteItemButton;
+export default UndoButton;
 
