@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import map from 'lodash/map';
 
 const TodoList = ({ todos }) => (
-  <ul>
-    { map(todos, ({text}) => <li>{text}</li>) }
-  </ul>
+  <select size="10" >
+    { map(todos, ({text}) => <option>{text}</option>) }
+  </select>
 );
 
 TodoList.propTypes = {
