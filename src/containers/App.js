@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as TodoActions from '../actions';
+import TodoList from '../components/TodoList';
 
 const App = ({todos, actions}) => (
   <div>
-    <h2>TODOS HERE</h2>
+    <h2>TODOS</h2>
+    <TodoList todos={todos} />
   </div>
 );
 

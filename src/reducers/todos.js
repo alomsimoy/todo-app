@@ -1,6 +1,11 @@
 import { ADD_TODO, DELETE_TODO } from '../constants/ActionTypes'
 
-const initialState = [];
+const initialState = [
+  {
+    id: 0,
+    text: 'Initial todo',
+  },
+];
 
 export default function todos(state = initialState, action) {
   switch (action.type) {
