@@ -9,7 +9,10 @@ import NewItemButton from '../components/NewItemButton';
 const App = ({todos, actions}) => (
   <div>
     <h2>TODOS</h2>
-    <TodoList todos={todos} />
+    <TodoList
+      todos={todos}
+      onSelect={actions.selectTodo}
+    />
     <NewItemButton action={actions.addTodo} />
   </div>
 );

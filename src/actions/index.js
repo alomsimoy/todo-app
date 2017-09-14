@@ -10,3 +10,8 @@ export const deleteTodo = (id) => ({
   id,
 });
 
+export const selectTodo = (id) => ({
+  type: types.SELECT_TODO,
+  id,
+});
+
