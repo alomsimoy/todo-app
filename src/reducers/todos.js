@@ -15,15 +15,10 @@ const initialState = {
   past: [],
   present: [
     {
-    id: 0,
-    text: 'Initial todo',
-    selected: false,
-  },
-  {
-    id: 1,
-    text: 'Initial tosdfdo',
-    selected: true,
-  },
+      id: 0,
+      text: 'First Item',
+      selected: false,
+    },
   ]
 };
 

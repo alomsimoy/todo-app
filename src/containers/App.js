@@ -10,7 +10,7 @@ import UndoButton from '../components/UndoButton';
 
 const App = ({todos, actions}) => (
   <div>
-    <h2>TODOS</h2>
+    <h2>Items</h2>
     <TodoList
       todos={todos}
       onSelect={actions.selectTodo}
