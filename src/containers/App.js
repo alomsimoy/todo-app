@@ -7,18 +7,21 @@ import TodoList from '../components/TodoList';
 import NewItemButton from '../components/NewItemButton';
 import DeleteItemButton from '../components/DeleteItemButton';
 import UndoButton from '../components/UndoButton';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 const App = ({todos, actions}) => (
-  <div>
-    <h2>Items</h2>
-    <TodoList
-      todos={todos}
-      onSelect={actions.selectTodo}
-    />
-    <NewItemButton action={actions.addTodo} />
-    <DeleteItemButton action={actions.deleteTodo} />
-    <UndoButton action={actions.undo} />
-  </div>
+  <MuiThemeProvider>
+    <div>
+      <TodoList
+        todos={todos}
+        onSelect={actions.selectTodo}
+      />
+      <br/>
+      <NewItemButton action={actions.addTodo} />
+      <DeleteItemButton action={actions.deleteTodo} />
+      <UndoButton action={actions.undo} />
+    </div>
+  </MuiThemeProvider>
 );
 
 App.propTypes = {

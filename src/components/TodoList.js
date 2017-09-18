@@ -2,24 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import map from 'lodash/map';
 import find from 'lodash/find';
-
-const getSelected = (todos) => {
-    const selected = find(todos, 'selected');
-    return selected ? selected.id : null;
-};
+import {
+  Table,
+  TableBody,
+  TableRow,
+  TableRowColumn,
+} from 'material-ui/Table';
 
 const TodoList = ({ todos, onSelect }) => (
-  <select
-    size="10"
-    value={getSelected(todos)}
-    onChange={(event) => onSelect(event.target.value)}
+  <Table
+    onCellClick={(index) => onSelect(todos[index].id)}
   >
-    { map(todos, ({ text , id }) => (
-      <option key={id} value={id}>
-        {text}
-      </option>
-    )) }
-  </select>
+    <TableBody
+      deselectOnClickaway={false}
+      showRowHover={true}
+    >
+      { map(todos, ({ text, id, selected }) => (
+        <TableRow value={id} key={id} selected={selected}>
+          <TableRowColumn>
+            {text}
+          </TableRowColumn>
+        </TableRow>
+      )) }
+    </TableBody>
+  </Table>
 );
 
 TodoList.propTypes = {

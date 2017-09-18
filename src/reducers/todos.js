@@ -56,7 +56,7 @@ export default function todos(state = initialState, action) {
           if (item.id == action.id) {
             return {
               ...item,
-              selected: true,
+              selected: !item.selected,
             };
           }
           return {

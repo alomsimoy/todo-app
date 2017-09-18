@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import RaisedButton from 'material-ui/RaisedButton';
 
 const DeleteItemButton = ({ action }) => (
-  <button
+  <RaisedButton
+    secondary
     onClick={action}
   >
     -
-  </button>
+  </RaisedButton>
 );
 
 DeleteItemButton.propTypes = {

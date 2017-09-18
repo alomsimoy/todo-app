@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import RaisedButton from 'material-ui/RaisedButton';
 
 const showPrompt = (callback) => {
   const text = window.prompt('Enter a new Item');
@@ -7,11 +8,12 @@ const showPrompt = (callback) => {
 };
 
 const NewItemButton = ({ action }) => (
-  <button
+  <RaisedButton
+    primary
     onClick={() => showPrompt(action)}
   >
     +
-  </button>
+  </RaisedButton>
 );
 
 NewItemButton.propTypes = {
