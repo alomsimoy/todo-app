@@ -6,7 +6,7 @@ const UndoButton = ({ action }) => (
   <RaisedButton
     onClick={action}
   >
-    { '<-' }
+    &larr;
   </RaisedButton>
 );
 
